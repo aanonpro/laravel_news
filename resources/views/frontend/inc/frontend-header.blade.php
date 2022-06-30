@@ -25,12 +25,12 @@
                   </li> --}}
                 </ul>
                 <ul class="navbar-top-right-menu">
-                  <li class="nav-item">
+                  {{-- <li class="nav-item">
                     <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">Login</a>
-                  </li>
+                    <a href="{{ url('/login') }}" class="nav-link">Login</a>
+                  </li> --}}
                   {{-- <li class="nav-item">
                     <a href="#" class="nav-link">Sign in</a>
                   </li> --}}
@@ -46,15 +46,15 @@
                 </div>
                 <div>
                   <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+                      class="navbar-toggler"
+                      type="button"
+                      data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
                   <div
                     class="navbar-collapse justify-content-center collapse"
                     id="navbarSupportedContent"

@@ -39,17 +39,20 @@
                 <div class="col-sm-12">
                   <div class="footer-border-bottom pb-2">
                     <div class="row">
-                      <div class="col-3 mt-2">
-                        <img
-                          src="{{asset('uploads/post/'.$recent_post->image_cover)}}"
-                          alt="thumb"
-                          class="img-fluid"
-                        />
-                      </div>
+                      
+                        <div class="col-3 mt-1">
+                          <a  class="text-decoration-none text-white " href="{{ url('topic/'.$recent_post->category->slug.'/'.$recent_post->slug)  }}" >
+                          <img
+                            src="{{asset('uploads/post/'.$recent_post->image_cover)}}"
+                            alt="thumb"
+                            class="img-fluid"/>
+                          </a>
+                        </div>
+                    
                       <div class="col-9">
                         <a  class="text-decoration-none text-white " href="{{ url('topic/'.$recent_post->category->slug.'/'.$recent_post->slug)  }}" >
                             <h5 class="font-weight-600" style="display: -webkit-box;
-                            -webkit-line-clamp: 2;
+                            -webkit-line-clamp: 3;
                             -webkit-box-orient: vertical;
                             overflow: hidden; ">
                             {{ $recent_post->title }}

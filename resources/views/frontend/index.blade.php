@@ -15,11 +15,12 @@
 
             <div class="col-xl-8 stretch-card grid-margin">
                 <a class="text-decoration-none " href="{{ url('topic/'.$all_post_item->category->slug.'/'.$all_post_item->slug)  }}" >
-                    <div class="position-relative">
+                    <div class="position-relative" >
                         <img
                         src="{{ asset('uploads/post/'.$all_post_item->image_cover) }}"
                         alt="banner"
                         class="img-fluid"
+                        
                         />
                         <div class="banner-content">
                         <div class="badge badge-danger fs-12 font-weight-bold mb-3">
@@ -52,10 +53,9 @@
 
               <div class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between" >
 
-
                     <div class="pr-3">
                         <a  class="text-decoration-none text-white " href="{{ url('topic/'.$all_cate_item->category->slug.'/'.$all_cate_item->slug)  }}" >
-                            <h5 style=" max-width: 175px; display: -webkit-box;
+                            <h5 style="display: -webkit-box;
                             -webkit-line-clamp: 2;
                             -webkit-box-orient: vertical;
                             overflow: hidden; ">{{ $all_cate_item->title }}</h5>

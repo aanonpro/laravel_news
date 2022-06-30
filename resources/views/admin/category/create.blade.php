@@ -33,7 +33,7 @@
             </div>
             <div class="mb-3">
                 <label>Image</label>
-                <input type="file" class="form-control" name="image" >
+                <input type="file" class="form-control" required name="image" >
             </div>
             <h6>SEO tags</h6>
             <div class="mb-3">

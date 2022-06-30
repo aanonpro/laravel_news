@@ -12,7 +12,7 @@
     <!-- plugin css for this page -->
     <link
       rel="stylesheet"
-      href="{{asset('assets/frontend/vendors/mdi/css/materialdesignicons.min.css')}}"
+      href="{{asset('frontend/assets/vendors/mdi/css/materialdesignicons.min.css')}}"
     />
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/aos/dist/aos.css/aos.css')}}" />
 
