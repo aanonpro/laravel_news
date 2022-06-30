@@ -1,0 +1,35 @@
+----------admin------------
+
+email: admin.anon@gmail.com
+pass: admin12345
+
+----------user-------------
+
+email: anon@gmail.com
+pass: anon123456
+
+==========================================
+
+Push to github
+
+1. git init
+
+2. git add .
+
+3. git commit -m "Your commit message"
+
+4. git remote add github (link of you Github project).git
+
+5. git remote -v
+
+6. git push -f github master
+
+--------------------------------------------
+
+==========image size============
+
+1. thumbnail: 502 * 374 px
+
+2. content: 1260 * 650
+
+3. slide: 1450 * 820
