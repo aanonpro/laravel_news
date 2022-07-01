@@ -7,7 +7,7 @@
     <div class="card-header">
         <h1 class="h3 mb-0 text-gray-800">Add Category </h1>
     </div>
-    <div class="card-body">
+    <div class="card-body " >
 
         @if($errors->any())
             <div class="alert alert-danger">
@@ -21,11 +21,11 @@
             @csrf
             <div class="mb-3">
                 <label>Category Name</label>
-                <input type="text" class="form-control" name="name" >
+                <input type="text" class="form-control" placeholder="Required" name="name" >
             </div>
             <div class="mb-3">
                 <label>slug</label>
-                <input type="text" class="form-control" name="slug" >
+                <input type="text" class="form-control" placeholder="Required" name="slug" >
             </div>
             <div class="mb-3">
                 <label>Description</label>
@@ -38,15 +38,15 @@
             <h6>SEO tags</h6>
             <div class="mb-3">
                 <label>Meta Title</label>
-                <input type="text" class="form-control" name="meta_title" >
+                <input type="text" class="form-control" placeholder="Required" name="meta_title" >
             </div>
             <div class="mb-3">
                 <label>Meta Description</label>
-                <textarea class="form-control" name="meta_description" rows="3"></textarea>
+                <textarea class="form-control" placeholder="Required" name="meta_description" rows="3"></textarea>
             </div>
             <div class="mb-3">
                 <label>Meta Keyword</label>
-                <textarea class="form-control" name="meta_keyword" rows="3"></textarea>
+                <textarea class="form-control" placeholder="Required" name="meta_keyword" rows="3"></textarea>
             </div>
 
             <h6>Status Mode</h6>
@@ -66,5 +66,5 @@
         </form>
     </div>
 </div>
- 
+
 @endsection

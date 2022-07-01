@@ -107,9 +107,9 @@ class PostController extends Controller
 
 
 
-    public function destroy($post_id) {
+    public function destroy(Request $request) {
 
-        $post = Post::find($post_id);
+        $post = Post::find($request->post_delete_id);
 
         if($post){
             $destination = 'uploads/post/' . $post->image_cover;

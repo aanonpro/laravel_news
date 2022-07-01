@@ -33,3 +33,7 @@ Push to github
 2. content: 1260 * 650
 
 3. slide: 1450 * 820
+
+
+4. content image size: 630 * 325 (px)
+

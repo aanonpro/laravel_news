@@ -4,6 +4,29 @@
 @section('content')
 
 
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form action="{{ url('admin/delete-post') }}" method="post" enctype="multipart/form">
+            @csrf
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete Post</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" name="post_delete_id" id="post_id">
+            <h5>Are you sure you want to delete this Post?</h5>
+            </div>
+            <div class="modal-footer">
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
 <div class="card mt-4">
 
     <div class="card-header">
@@ -16,6 +39,7 @@
             </div>
         @endif
 
+    <div class="table-responsive">
         <table id="myDataTable" class="table table-bordered">
             <thead>
                 <tr>
@@ -41,14 +65,38 @@
                         </td>
                         <td>
                             <a href="{{ url('admin/edit-post/' . $postitem->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="{{ url('admin/delete-post/' . $postitem->id) }}" class="btn btn-danger btn-sm">Delete</a>
+                            {{-- <a href="{{ url('admin/delete-post/' . $postitem->id) }}" class="btn btn-danger btn-sm">Delete</a> --}}
+                            <button class="btn btn-danger btn-sm deletePostBtn" type="button" value="{{ $postitem->id }}">Delete</button>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+    </div>
 
     </div>
 </div>
+
+@endsection
+
+@section('scripts')
+
+   <script>
+
+    $(document).ready(function () {
+        // $('.deleteCategoryBtn').click(function (e) {
+        $(document).on('click','.deletePostBtn', function (e) {
+
+            e.preventDefault();
+
+            var post_id = $(this).val();
+            $('#post_id').val(post_id);
+            $('#deleteModal').modal('show');
+
+
+        });
+    });
+
+   </script>
 
 @endsection

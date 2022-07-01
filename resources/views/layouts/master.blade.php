@@ -129,6 +129,7 @@
             $("#mySummernote").summernote({
                 height: 250,
             });
+            // $("img").addClass("img-responsive");
             $('.dropdown-toggle').dropdown();
         });
     </script>
