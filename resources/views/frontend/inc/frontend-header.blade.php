@@ -40,9 +40,16 @@
             <div class="navbar-bottom">
               <div class="d-flex justify-content-between align-items-center">
                 <div>
+                  @php
+                    $setting = App\Models\Setting::find(1);
+                  @endphp
+                  @if ($setting)
+                
                   <a class="navbar-brand" href="{{ url('/') }}"
-                    ><img src="{{asset('frontend/assets/images/logo.svg')}}" alt=""
+                    ><img src="{{asset('uploads/settings/'.$setting->logo)}}" alt=""
                   /></a>
+                      
+                  @endif
                 </div>
                 <div>
                   <button
