@@ -14,11 +14,10 @@ Route::get('topic/{category_slug}',[App\Http\Controllers\Frontend\FrontendContro
 Route::get('topic/{category_slug}/{post_slug}',[App\Http\Controllers\Frontend\FrontendController::class, 'viewPost']);
 
 
-Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
-    Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
-});
+
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
+    // Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 

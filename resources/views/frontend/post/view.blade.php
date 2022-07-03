@@ -24,7 +24,7 @@
                     <a class="text-decoration-none" style="color: #032a63;" href="{{ url('topic/'.$category->slug) }}">
                         <span class="mr-2">{{ $category->name }} </span>
                     </a>
-                        {{ $category->created_at->format('d-m-Y') }}
+                        {{ $post->created_at->format('d-m-Y') }}
                   </p>
                   {{-- <div>
                     <img

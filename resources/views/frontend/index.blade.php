@@ -13,13 +13,18 @@
 
         @foreach ($all_posts->take(1) as $all_post_item)
 
-            <div class="col-xl-8 stretch-card grid-margin">
+            <div class="col-xl-8 stretch-card grid-margin"  >
                 <a class="text-decoration-none " href="{{ url('topic/'.$all_post_item->category->slug.'/'.$all_post_item->slug)  }}" >
                     <div class="position-relative" >
                         <img
                         src="{{ asset('uploads/post/'.$all_post_item->image_cover) }}"
                         alt="banner"
                         class="img-fluid"
+                        style=" max-width: 100%; 
+                        max-height820%;
+                        
+                        object-fit: cover;
+                       "
                         
                         />
                         <div class="banner-content">

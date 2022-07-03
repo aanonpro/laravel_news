@@ -67,7 +67,7 @@
             <span>Settings</span></a>
     </li> --}}
     <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
+    <li class="nav-item {{ Request::is('admin/settings') ? 'active':'' }}">
         <a class="nav-link " href="{{ url('admin/settings') }}">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Settings</span>
