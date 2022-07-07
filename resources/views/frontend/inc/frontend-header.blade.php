@@ -15,10 +15,10 @@
             <div class="navbar-top">
               <div class="d-flex justify-content-between align-items-center">
                 <ul class="navbar-top-left-menu">
-       
+
                 </ul>
                 <ul class="navbar-top-right-menu">
-         
+
                 </ul>
               </div>
             </div>
@@ -29,11 +29,11 @@
                     $setting = App\Models\Setting::find(1);
                   @endphp
                   @if ($setting)
-                
+
                   <a class="navbar-brand" href="{{ url('/') }}"
                     ><img src="{{asset('uploads/settings/'.$setting->logo)}}" alt=""
                   /></a>
-                      
+
                   @endif
                 </div>
                 <div>
@@ -76,7 +76,7 @@
                   </div>
                 </div>
                 <ul class="social-media">
-    
+
                 </ul>
               </div>
             </div>

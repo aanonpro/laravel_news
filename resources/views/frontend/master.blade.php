@@ -26,6 +26,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
     <!-- endinject -->
+
   </head>
 
 <body>

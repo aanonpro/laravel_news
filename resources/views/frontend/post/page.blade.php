@@ -6,7 +6,16 @@
 
 @section('content')
 
+<style>
 
+    .active{
+    color: #2066d6 !important;
+    }
+
+
+}
+
+  </style>
 
 
   <div class="content-wrapper">
@@ -77,10 +86,15 @@
 
                 @endforelse
 
+                <div class="d-flex justify-content-center">
+
+                    {{ $post->links() }}
+                </div>
 
 
 
               </div>
+
               <div class="col-lg-4">
                 <h2 class="mb-4 text-primary font-weight-600">
                   Latest news

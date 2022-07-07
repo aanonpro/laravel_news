@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Redis;
 class FrontendController extends Controller
 {
     public function index(){
-
         $setting = Setting::find(1);
 
         $date = Carbon::now()->subDays(1);
@@ -30,7 +29,7 @@ class FrontendController extends Controller
 
         $category = Category::where('slug', $category_slug)->where('status','0')->first();
         if($category){
-            $post = Post::where('category_id', $category->id)->where('status','0')->paginate(6);
+            $post = Post::where('category_id', $category->id)->where('status','0')->simplePaginate(1);
              $latest_posts = Post::where('category_id', $category->id)->where('status','0')->latest('created_at','DESC')->get()->take(3);
             return view('frontend.post.page', compact('post','category','latest_posts'));
         }
