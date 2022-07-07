@@ -1,3 +1,10 @@
+<style>
+
+  .active{
+  color: #2066d6 !important;
+  }
+
+</style>
 
 <div class="container-scroller">
     <div class="main-panel">
@@ -8,32 +15,10 @@
             <div class="navbar-top">
               <div class="d-flex justify-content-between align-items-center">
                 <ul class="navbar-top-left-menu">
-                  {{-- <li class="nav-item">
-                    <a href="pages/index-inner.html" class="nav-link">Advertise</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/aboutus.html" class="nav-link">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Events</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Write for Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">In the Press</a>
-                  </li> --}}
+       
                 </ul>
                 <ul class="navbar-top-right-menu">
-                  {{-- <li class="nav-item">
-                    <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="{{ url('/login') }}" class="nav-link">Login</a>
-                  </li> --}}
-                  {{-- <li class="nav-item">
-                    <a href="#" class="nav-link">Sign in</a>
-                  </li> --}}
+         
                 </ul>
               </div>
             </div>
@@ -75,7 +60,7 @@
                         </button>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link" href="{{ url('/') }}">Home</a>
+                        <a class="nav-link {{ Request::is('/') ? 'active':'' }}" href="{{ url('/') }}">Home</a>
                       </li>
                         @php
                             $categories = App\Models\Category::where('navbar_status','0')->where('status','0')->get();
@@ -83,7 +68,7 @@
 
                         @foreach ($categories as $cateitem)
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('topic/'.$cateitem->slug) }}">{{ $cateitem->name }}</a>
+                                <a class="nav-link {{ Request::is('topic/'.$cateitem->slug) ? 'active':'' }}" href="{{ url('topic/'.$cateitem->slug) }}">{{ $cateitem->name }}</a>
                             </li>
                         @endforeach
 
@@ -91,21 +76,7 @@
                   </div>
                 </div>
                 <ul class="social-media">
-                  {{-- <li>
-                    <a href="#">
-                      <i class="mdi mdi-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="mdi mdi-youtube"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="mdi mdi-twitter"></i>
-                    </a>
-                  </li> --}}
+    
                 </ul>
               </div>
             </div>
