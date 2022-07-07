@@ -86,12 +86,6 @@
 
                 @endforelse
 
-                <div class="d-flex justify-content-center">
-
-                    {{ $post->links() }}
-                </div>
-
-
 
               </div>
 
@@ -162,6 +156,12 @@
             </div>
           </div>
 
+          <div class="d-flex justify-content-center mb-4">
+
+            {{ $post->links() }}pagination
+            
+          </div>
+      
           {{-- <div class="your-paginate mt-3">
             {{ $post->links()}}sdsffe
         </div> --}}
@@ -173,6 +173,6 @@
   <!-- main-panel ends -->
   <!-- container-scroller ends -->
 
-
+  
 
 @endsection
