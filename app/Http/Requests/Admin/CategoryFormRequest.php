@@ -42,16 +42,15 @@ class CategoryFormRequest extends FormRequest
                 'mimes:jpeg,jpg,png'
             ],
             'meta_title' => [
-                'required',
-                'string',
-                'max:200'
+                'nullable',
+                'string'
             ],
             'meta_description' => [
-                'required',
+                'nullable',
                 'string'
             ],
             'meta_keyword' => [
-                'required',
+                'nullable',
                 'string'
             ],
             'navbar_status' => [

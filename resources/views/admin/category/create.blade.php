@@ -33,20 +33,20 @@
             </div>
             <div class="mb-3">
                 <label>Image</label>
-                <input type="file" class="form-control" required name="image" >
+                <input type="file" class="form-control"  name="image" >
             </div>
             <h6>SEO tags</h6>
             <div class="mb-3">
                 <label>Meta Title</label>
-                <input type="text" class="form-control" placeholder="Required" name="meta_title" >
+                <input type="text" class="form-control"  name="meta_title" >
             </div>
             <div class="mb-3">
                 <label>Meta Description</label>
-                <textarea class="form-control" placeholder="Required" name="meta_description" rows="3"></textarea>
+                <textarea class="form-control"  name="meta_description" rows="3"></textarea>
             </div>
             <div class="mb-3">
                 <label>Meta Keyword</label>
-                <textarea class="form-control" placeholder="Required" name="meta_keyword" rows="3"></textarea>
+                <textarea class="form-control"  name="meta_keyword" rows="3"></textarea>
             </div>
 
             <h6>Status Mode</h6>

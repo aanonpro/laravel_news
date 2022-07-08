@@ -68,7 +68,7 @@
 
                         @foreach ($categories as $cateitem)
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::is('topic/'.$cateitem->slug) ? 'active':'' }}" href="{{ url('topic/'.$cateitem->slug) }}">{{ $cateitem->name }}</a>
+                                <a class="nav-link {{ Request::is('topic/'.$cateitem->slug) || Request::is('topic/'.$cateitem->slug.'/*') ? 'active':'' }}" href="{{ url('topic/'.$cateitem->slug) }}">{{ $cateitem->name }}</a>
                             </li>
                         @endforeach
 

@@ -29,7 +29,7 @@ class FrontendController extends Controller
 
         $category = Category::where('slug', $category_slug)->where('status','0')->first();
         if($category){
-            $post = Post::where('category_id', $category->id)->where('status','0')->take(6)->Paginate(6);
+            $post = Post::where('category_id', $category->id)->where('status','0')->take(6)->Paginate(1);
              $latest_posts = Post::where('category_id', $category->id)->where('status','0')->latest('created_at','DESC')->get()->take(3);
             return view('frontend.post.page', compact('post','category','latest_posts'));
         }

@@ -12,9 +12,6 @@
     color: #2066d6 !important;
     }
 
-
-}
-
   </style>
 
 
@@ -156,12 +153,14 @@
             </div>
           </div>
 
-          <div class="d-flex justify-content-center mb-4">
 
-            {{ $post->links() }}pagination
-            
+
+          <div class="d-flex justify-content-center mt-5">
+
+              {{ $post->links() }}
+
           </div>
-      
+
           {{-- <div class="your-paginate mt-3">
             {{ $post->links()}}sdsffe
         </div> --}}
@@ -173,6 +172,6 @@
   <!-- main-panel ends -->
   <!-- container-scroller ends -->
 
-  
+
 
 @endsection
