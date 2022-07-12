@@ -27,12 +27,7 @@ $post = App\Models\Post::where('status','0')->orderBy('created_at','DESC')->get(
                         alt="banner"
                         class="img-fluid"
                         style=" max-width: 100%;
-                        max-height820%;
-
-                        object-fit: cover;
-                       "
-
-                        />
+                        object-fit: cover; " />
                         <div class="banner-content">
                         <div class="badge badge-danger fs-12 font-weight-bold mb-3">
                             {{ $all_post_item->category->name }}
@@ -63,32 +58,27 @@ $post = App\Models\Post::where('status','0')->orderBy('created_at','DESC')->get(
               @foreach ($all_posts as $all_cate_item)
 
               <div class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between" >
-
                     <div class="pr-3">
-                        <a  class="text-decoration-none text-white " href="{{ url('topic/'.$all_cate_item->category->slug.'/'.$all_cate_item->slug)  }}" >
-                            <h5 style="display: -webkit-box;
+                      <a  class="text-decoration-none text-white " href="{{ url('topic/'.$all_cate_item->category->slug.'/'.$all_cate_item->slug)  }}" >
+                          <h5 style="display: -webkit-box;
                             -webkit-line-clamp: 2;
                             -webkit-box-orient: vertical;
-                            overflow: hidden; ">{{ $all_cate_item->title }}</h5>
-
-                    <div class="fs-12">
-                        <span class="mr-2"> {{ $all_cate_item->category->name }} </span> - {{$all_cate_item->created_at->format('d-m-Y')}}
-
+                            overflow: hidden; ">{{ $all_cate_item->title }}
+                          </h5>
+                      <div class="fs-12">
+                          <span class="mr-2"> {{ $all_cate_item->category->name }} </span> - {{$all_cate_item->created_at->format('d-m-Y')}}
+                      </div>
                     </div>
-                    </div>
-
                     <div class="rotate-img">
-                    <img
-                        src="{{ asset('uploads/post/'.$all_cate_item->image_cover) }}"
-                        alt="thumb"
-                        class="img-fluid img-lg" />
+                      <img
+                          src="{{ asset('uploads/post/'.$all_cate_item->image_cover) }}"
+                          alt="thumb"
+                          class="img-fluid img-lg" />
                     </div>
-                </a>
+                  </a>
               </div>
 
               @endforeach
-
-
 
             </div>
           </div>
@@ -102,7 +92,7 @@ $post = App\Models\Post::where('status','0')->orderBy('created_at','DESC')->get(
               <ul class="vertical-menu">
                 @foreach ($cate_item as $catelist_item )
 
-                <li><a href="{{ url('topic/'.$catelist_item->slug) }}">{{$catelist_item->name}}</a></li>
+                  <li><a href="{{ url('topic/'.$catelist_item->slug) }}">{{$catelist_item->name}}</a></li>
 
                 @endforeach
 
@@ -113,28 +103,26 @@ $post = App\Models\Post::where('status','0')->orderBy('created_at','DESC')->get(
         <div class="col-lg-9 stretch-card grid-margin">
           <div class="card">
             <div class="card-body">
-                @php
 
+              @php
                 $cate_items = App\Models\Category::where('navbar_status','0')->where('status','0')->get();
-            @endphp
+              @endphp
+
                 @foreach ($all_posts as $home_all_post)
 
               <div class="row">
                 <div class="col-sm-4 grid-margin">
                   <div class="position-relative">
                     <a  class="text-decoration-none " href="{{ url('topic/'.$home_all_post->category->slug.'/'.$home_all_post->slug)  }}" >
-
-                        <div class="rotate-img">
-                        <img
-                            src="{{asset('uploads/post/'.$home_all_post->image_cover)}}"
-                            alt="thumb"
-                            class="img-fluid"
-                        />
-                        </div>
-                        <div class="badge-positioned">
-                            <span class="badge badge-danger font-weight-bold"
-                                >{{$home_all_post->category->name}}</span>
-                        </div>
+                      <div class="rotate-img">
+                      <img
+                          src="{{asset('uploads/post/'.$home_all_post->image_cover)}}"
+                          alt="cover"
+                          class="img-fluid"/>
+                      </div>
+                      <div class="badge-positioned">
+                          <span class="badge badge-danger font-weight-bold">{{$home_all_post->category->name}}</span>
+                      </div>
                     </a>
                   </div>
                 </div>

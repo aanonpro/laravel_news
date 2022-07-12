@@ -50,14 +50,12 @@
                 <h2 class="mb-4 text-primary font-weight-600">
                   Latest news
                 </h2>
+                @foreach ($lastest_posts as $lastest_posts_item)
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="border-bottom pb-4 pt-4">
                       <div class="row">
                         <div class="col-sm-8">
-
-                            @foreach ($lastest_posts as $lastest_posts_item)
-
                             <a href="{{ url('topic/'.$lastest_posts_item->category->slug.'/'.$lastest_posts_item->slug) }}"  class="text-decoration-none text-dark">
                                 <h5 class="font-weight-600 mb-1" style="display: -webkit-box;
                                 -webkit-line-clamp: 2;
@@ -66,9 +64,6 @@
                                     {{$lastest_posts_item->title}}
                                 </h5>
                             </a>
-
-                            @endforeach
-
                           <p class="fs-13 text-muted mb-0">
                             <span class="mr-2"><a class="text-decoration-none" style="color: #032a63;"  href="{{ url('topic/'.$category->slug) }}">{{ $category->name }}</a> </span>
                             {{$lastest_posts_item->created_at->translatedFormat(' F j , Y')}}
@@ -90,6 +85,7 @@
                     </div>
                   </div>
                 </div>
+                @endforeach
                 
                 <div class="trending">
                   <h2 class="mb-4 text-primary font-weight-600">

@@ -24,18 +24,24 @@ class FrontendController extends Controller
 
     }
 
+    public $amount = 10;
 
     public function viewCategoryPost(string $category_slug){
 
         $category = Category::where('slug', $category_slug)->where('status','0')->first();
         if($category){
-            $post = Post::where('category_id', $category->id)->where('status','0')->take(6)->Paginate(1);
+            $post = Post::where('category_id', $category->id)->where('status','0')->take($this->amount)->get();
+          
              $latest_posts = Post::where('category_id', $category->id)->where('status','0')->latest('created_at','DESC')->get()->take(3);
             return view('frontend.post.page', compact('post','category','latest_posts'));
         }
         else{
             return redirect('/');
         }
+    }
+
+    public function load(){
+        $this->amount +=10;
     }
 
     public function viewPost(string $category_slug, string $post_slug){
