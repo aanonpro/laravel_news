@@ -11,21 +11,6 @@
               the entertainment industry.
             </h5>
             <ul class="social-media mb-3">
-              {{-- <li>
-                <a href="#">
-                  <i class="mdi mdi-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="mdi mdi-youtube"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="mdi mdi-twitter"></i>
-                </a>
-              </li> --}}
             </ul>
           </div>
           <div class="col-sm-4">
@@ -39,19 +24,19 @@
                 <div class="col-sm-12">
                   <div class="footer-border-bottom pb-2">
                     <div class="row">
-                      
+
                         <div class="col-3 mt-1">
                           <a  class="text-decoration-none text-white " href="{{ url('topic/'.$recent_post->category->slug.'/'.$recent_post->slug)  }}" >
-                          <img
+                          <img title=" {{ $recent_post->title }}"
                             src="{{asset('uploads/post/'.$recent_post->image_cover)}}"
-                            alt="thumb"
+                            alt=" {{ $recent_post->name }}"
                             class="img-fluid"/>
                           </a>
                         </div>
-                    
+
                       <div class="col-9">
                         <a  class="text-decoration-none text-white " href="{{ url('topic/'.$recent_post->category->slug.'/'.$recent_post->slug)  }}" >
-                            <h5 class="font-weight-600" style="display: -webkit-box;
+                            <h5 title="{{ $recent_post->title }}" class="font-weight-600" style="display: -webkit-box;
                             -webkit-line-clamp: 3;
                             -webkit-box-orient: vertical;
                             overflow: hidden; ">
@@ -74,7 +59,7 @@
             <div class="footer-border-bottom pb-2">
                 <div class="d-flex justify-content-between align-items-center">
                     <a class="text-light" href="{{ url('topic/'.$all_footer_cate->slug) }}">
-                        <h5 class="mb-0 font-weight-600">{{ $all_footer_cate->name }}</h5>
+                        <h5 title="{{ $all_footer_cate->name }}" class="mb-0 font-weight-600">{{ $all_footer_cate->name }}</h5>
                     </a>
                   {{-- <div class="count">1</div> --}}
                 </div>
