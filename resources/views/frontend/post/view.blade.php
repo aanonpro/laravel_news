@@ -5,6 +5,22 @@
 @section('meta_keyword',"$post->meta_keyword")
 
 @section('content')
+
+<style>
+
+    h1{
+         font-size: 24px !important;
+        line-height: 38px !important;
+        margin-bottom: 10px !important;
+        color: #333333 !important;
+
+
+        font-family: 'Hanuman',Arial, Helvetica, sans-serif !important;
+    }
+
+</style>
+
+
   <div class="content-wrapper">
     <div class="container">
       <div class="col-sm-12">

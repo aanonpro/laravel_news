@@ -10,6 +10,11 @@
     <meta name="keywords" content="@yield('meta_keyword')">
     <meta name="author" content="Nisai news">
     <!-- plugin css for this page -->
+    {{-- google font  --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@300&display=swap" rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="{{asset('frontend/assets/vendors/mdi/css/materialdesignicons.min.css')}}"
@@ -28,6 +33,12 @@
     <!-- endinject -->
 
   </head>
+
+  {{-- <style>
+    body {
+  font-family: Arial, sans-serif;
+}
+  </style> --}}
 
 <body>
 
