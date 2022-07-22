@@ -1,4 +1,9 @@
 <!-- partial:partials/_footer.html -->
+<style>
+.footer-news{
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+</style>
 <footer>
     <div class="footer-top">
       <div class="container">
@@ -36,8 +41,8 @@
 
                       <div class="col-9">
                         <a  class="text-decoration-none text-white " href="{{ url('topic/'.$recent_post->category->slug.'/'.$recent_post->slug)  }}" >
-                            <h5 title="{{ $recent_post->title }}" class="font-weight-600" style="display: -webkit-box;
-                            -webkit-line-clamp: 3;
+                            <h5 title="{{ $recent_post->title }}" class="font-weight-600 footer-news" style="display: -webkit-box;
+                            -webkit-line-clamp: 2;
                             -webkit-box-orient: vertical;
                             overflow: hidden; ">
                             {{ $recent_post->title }}

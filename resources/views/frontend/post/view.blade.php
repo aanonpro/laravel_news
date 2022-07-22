@@ -8,14 +8,16 @@
 
 <style>
 
-    h1{
+    .title{
          font-size: 24px !important;
         line-height: 38px !important;
         margin-bottom: 10px !important;
-        color: #333333 !important;
-
-
-        font-family: 'Hanuman',Arial, Helvetica, sans-serif !important;
+        color: #383a3b !important;
+        font-family: 'Kantumruy Pro', sans-serif;
+    }
+    .relate , .popular{
+        color: #383a3b !important;
+        font-family: 'Kantumruy Pro', sans-serif;
     }
 
 </style>
@@ -29,7 +31,7 @@
             <div class="row">
               <div class="col-lg-8">
                 <div>
-                  <h1 class="font-weight-600 mb-1">
+                  <h1 class="font-weight-600 mb-1 title">
                     {!! $post->title !!}
                   </h1>
                   <p class="fs-13 text-muted mb-0">
@@ -70,7 +72,7 @@
                       <div class="row">
                         <div class="col-sm-8">
                             <a href="{{ url('topic/'.$lastest_posts_item->category->slug.'/'.$lastest_posts_item->slug) }}"  class="text-decoration-none text-dark">
-                                <h5 class="font-weight-600 mb-1" style="display: -webkit-box;
+                                <h5 class="font-weight-600 mb-1 relate" style="display: -webkit-box;
                                 -webkit-line-clamp: 2;
                                 -webkit-box-orient: vertical;
                                 overflow: hidden; ">
@@ -130,7 +132,7 @@
                         <div class="row">
                           <div class="col-sm-8">
                               <a href="{{ url('topic/'.$p_item->category->slug.'/'.$p_item->slug) }}"  class="text-decoration-none text-dark">
-                                  <h5 class="font-weight-600 mb-1" style="display: -webkit-box;
+                                  <h5 class="font-weight-600 mb-1 popular" style="display: -webkit-box;
                                   -webkit-line-clamp: 2;
                                   -webkit-box-orient: vertical;
                                   overflow: hidden; ">

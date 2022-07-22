@@ -8,6 +8,14 @@
 
     <style>
 
+        .page-news, .relate-page, .popular-page{
+            color: #383a3b !important;
+            font-family: 'Kantumruy Pro', sans-serif;
+        }
+        .short-page-news{
+            font-family: 'Roboto', sans-serif;
+        }
+
     .active{
     color: #2066d6 !important;
     }
@@ -80,7 +88,7 @@
                         </div>
                         <div class="col-sm-8 grid-margin">
                             <a class="text-decoration-none " style=" color:rgb(15, 14, 14);" href="{{ url('topic/'.$category->slug.'/'.$postitem->slug)  }}" >
-                                <h2 class="font-weight-600 mb-2 " style=" display: -webkit-box;
+                                <h2 class="font-weight-600 mb-2 page-news" style=" display: -webkit-box;
                                 -webkit-line-clamp: 2;
                                 -webkit-box-orient: vertical;
                                 overflow: hidden;">
@@ -91,7 +99,7 @@
                             <span class="mr-2">Posted On -</span>{{ $postitem->created_at->translatedFormat(' F j, Y') }} |
                             <span class="mr-2"> By -</span>{{ $postitem->user->name }}
                         </p>
-                        <p class="fs-15 "  style=" display: -webkit-box;
+                        <p class="fs-15 short-page-news "  style=" display: -webkit-box;
                         -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical;
                         overflow: hidden;">
@@ -113,7 +121,6 @@
 
                 @endforelse
 
-
               </div>
 
               <div class="col-lg-4">
@@ -128,7 +135,7 @@
                       <div class="row">
                         <div class="col-sm-8">
                             <a class="text-decoration-none " style=" color:rgb(15, 14, 14);" href="{{ url('topic/'.$last_item->category->slug.'/'.$last_item->slug)  }}" >
-                          <h5 class="font-weight-600 mb-1" style="display: -webkit-box;
+                          <h5 class="font-weight-600 mb-1 relate-page" style="display: -webkit-box;
                           -webkit-line-clamp: 2;
                           -webkit-box-orient: vertical;
                           overflow: hidden; ">
@@ -188,7 +195,7 @@
 
 
                               <a href="{{ url('topic/'.$p_item->category->slug.'/'.$p_item->slug) }}"  class="text-decoration-none text-dark">
-                                  <h5 class="font-weight-600 mb-1" style="display: -webkit-box;
+                                  <h5 class="font-weight-600 mb-1 popular-page" style="display: -webkit-box;
                                   -webkit-line-clamp: 2;
                                   -webkit-box-orient: vertical;
                                   overflow: hidden; ">

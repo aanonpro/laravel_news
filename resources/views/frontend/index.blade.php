@@ -8,6 +8,23 @@
 
 <style>
 
+    .news-slide{
+        font-family: 'Kantumruy Pro', sans-serif;
+        font-weight: 600;
+    }
+    .latest{
+        font-family: 'Kantumruy Pro', sans-serif;
+    }
+    .news-content{
+        color: #383a3b !important;
+        font-family: 'Kantumruy Pro', sans-serif;
+    }
+    .short_news{
+        color: #383a3b !important;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
     h1:hover{
         color: #ffffff !important;
         filter:brightness(1) !important;
@@ -23,9 +40,9 @@
     }
 
     .title_news:hover{
-        color: #272222 !important;
+        color:  #585e61 !important;
         filter:brightness(1) !important;
-        text-shadow: rgb(34, 34, 37) 0px 0 1px;
+        text-shadow: rgb(59, 59, 68) 0px 0 1px;
     }
 
     .cate{
@@ -59,11 +76,11 @@
                             {{ $all_post_item->category->name }}
                         </div>
                         {{-- <h1 class="mb-0">GLOBAL PANDEMIC</h1> --}}
-                        <h1 title="{!! $all_post_item->short_title !!}" class="mb-2 " style=" display: -webkit-box;
+                        <h1 title="{!! $all_post_item->title !!}" class="mb-2 news-slide" style=" display: -webkit-box;
                         -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical;
                         overflow: hidden;">
-                            {!! $all_post_item->short_title !!}
+                            {!! $all_post_item->title !!}
                         </h1>
                         <div class="fs-12">
                             <span class="mr-2">Posted On - </span>{{ $all_post_item->created_at->translatedFormat(' F j, Y') }} |
@@ -88,10 +105,10 @@
 
                     <div class="pr-3">
                         <a  class="text-decoration-none text-white " href="{{ url('topic/'.$all_latest_item->category->slug.'/'.$all_latest_item->slug)  }}" >
-                            <h5 title="{{ $all_latest_item->short_title }}" style="display: -webkit-box;
+                            <h5 title="{{ $all_latest_item->title }}" class="latest" style="display: -webkit-box;
                             -webkit-line-clamp: 2;
                             -webkit-box-orient: vertical;
-                            overflow: hidden; ">{{ $all_latest_item->short_title }}</h5>
+                            overflow: hidden; ">{{ $all_latest_item->title }}</h5>
 
                     <div class="fs-12">
                         <span title="{{ $all_latest_item->category->name }} " class="mr-2 cate"> {{ $all_latest_item->category->name }} </span> - {{$all_latest_item->created_at->translatedFormat(' F j, Y')}}
@@ -100,7 +117,7 @@
                     </div>
 
                     <div class="rotate-img">
-                    <img title="{{ $all_latest_item->short_title }}"
+                    <img title="{{ $all_latest_item->title }}"
                         src="{{ asset('uploads/post/'.$all_latest_item->image_cover) }}"
                         alt="{{ $all_latest_item->name }}"
                         class="img-fluid img-lg" />
@@ -165,7 +182,7 @@
                     <div class="col-sm-8  grid-margin">
                         <a  class="text-decoration-none text-dark " href="{{ url('topic/'.$home_all_post->category->slug.'/'.$home_all_post->slug)  }}" >
 
-                            <h2 title="{{$home_all_post->title}}" class="mb-2 font-weight-600 title_news" style=" display: -webkit-box;
+                            <h2 title="{{$home_all_post->title}}" class="mb-2 font-weight-600 title_news news-content" style=" display: -webkit-box;
                             -webkit-line-clamp: 2;
                             -webkit-box-orient: vertical;
                             overflow: hidden;">
@@ -176,7 +193,7 @@
                         <span class="mr-2">Posted On - </span>{{$home_all_post->created_at->translatedFormat(' F j, Y')}} |
                         <span class="mr-2">By - </span>{{$home_all_post->user->name}}
                     </div>
-                    <p class="mb-0"  style=" display: -webkit-box;
+                    <p class="mb-0 short_news"  style=" display: -webkit-box;
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                     overflow: hidden;">
