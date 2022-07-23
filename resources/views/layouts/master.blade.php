@@ -22,8 +22,7 @@
     {{-- link import from admin panel --}}
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
@@ -74,25 +73,6 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    {{-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 
     {{-- script add from admin panel --}}
       <!-- Bootstrap core JavaScript-->
@@ -115,12 +95,17 @@
         } );
       </script>
 
-      <!-- Page level plugins -->
-      {{-- <script src="{{ asset('assets/vendor/chart.js/Chart.min.js')}}"></script> --}}
 
-      <!-- Page level custom scripts -->
-      {{-- <script src="{{ asset('assets/js/demo/chart-area-demo.js')}}"></script>
-      <script src="{{ asset('assets/js/demo/chart-pie-demo.js')}}"></script> --}}
+	
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+
+    <script>
+        ClassicEditor
+        .create( document.querySelector( '#mySummernote' ) )
+        .catch( error => {
+        console.error( error );
+        } );
+    </script> --}}
 
       {{-- summernote js link --}}
       <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
@@ -129,10 +114,19 @@
             $("#mySummernote").summernote({
                 height: 250,
             });
+            $('#mySummernote').summernote({
+        fontNames: [
+        'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New',
+        'Helvetica Neue', 'Helvetica', 'Impact', 'Lucida Grande',
+        'Tahoma', 'Times New Roman', 'Verdana', 'Microsoft YaHei',
+        'Roboto'
+      ],
+});
             // $("img").addClass("img-responsive");
             $('.dropdown-toggle').dropdown();
         });
-    </script>
+        </script>
+
 
     @yield('scripts')
 

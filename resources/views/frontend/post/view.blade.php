@@ -19,6 +19,7 @@
         color: #383a3b !important;
         font-family: 'Kantumruy Pro', sans-serif;
     }
+    
 
 </style>
 
@@ -41,7 +42,7 @@
                         {{ $post->created_at->translatedFormat('l , F j , Y') }}
                   </p>
 
-                  <p class="mb-4 fs-15">
+                  <p class="mb-4 fs-15 view-content">
                     {!! $post->Description !!}
                   </p>
                 </div>
