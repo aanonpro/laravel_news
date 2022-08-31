@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Redis;
 class FrontendController extends Controller
 {
     public function index(){
-        $setting = Setting::find(1);
+        $setting = Setting::find('1');
 
         // $date = Carbon::now()->subDays(1);
 
