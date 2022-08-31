@@ -1,26 +1,53 @@
 /* Pagination */
+// .pagination .page-item.active .page-link, .pagination .page-item:hover .page-link, .pagination .page-item:focus .page-link, .pagination .page-item:active .page-link {
+//     color: #007bff;
+// }
 
-.pagination {
-  padding-bottom: 100px;
-  padding-top: 92px;
-  .page-item {
-    .page-link {
-      border-color: $border-color;
-      color: $text-muted;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 15px 64px;
-    }
-    .active {
-      color: $primary;
-    }
-    &.active,
-    &:hover,
-    &:focus,
-    &:active {
-      .page-link {
-        color: $primary;
-      }
-    }
-  }
-}
+// .pagination .page-item .page-link {
+//     border-color: #e6e7e8;
+//     /* color: #ababac; */
+//     font-size: 14px;
+//     font-weight: 500;
+//     /* padding: 15px 64px; */
+// }
+// .page-item.active .page-link {
+//     z-index: 3;
+//     color: #fff;
+//     background-color: #007bff;
+//     border-color: #007bff;
+// }
+// .page-link {
+//     position: relative;
+//     display: block;
+//     padding: 0.5rem 0.75rem;
+//     margin-left: -1px;
+//     line-height: 1.25;
+//     color: #007bff;
+//     background-color: #fff;
+//     border: 1px solid #dee2e6;
+// }
+
+// .pagination {
+//   padding-bottom: 100px;
+//   padding-top: 92px;
+//   .page-item {
+//     .page-link {
+//       border-color: $border-color;
+//       color: $text-muted;
+//       font-size: 14px;
+//       font-weight: 500;
+//     //   padding: 15px 64px;
+//     }
+//     .active {
+//       color: $primary;
+//     }
+//     &.active,
+//     &:hover,
+//     &:focus,
+//     &:active {
+//       .page-link {
+//         color: $primary;
+//       }
+//     }
+//   }
+// }

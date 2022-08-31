@@ -31,7 +31,7 @@
                   @if ($setting)
 
                   <a class="navbar-brand" href="{{ url('/') }}"
-                    ><img src="{{asset('uploads/settings/'.$setting->logo)}}" alt=""
+                    ><img title="Nisai Home" src="{{asset('uploads/settings/'.$setting->logo)}}" alt=""
                   /></a>
 
                   @endif
@@ -60,7 +60,7 @@
                         </button>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link {{ Request::is('/') ? 'active':'' }}" href="{{ url('/') }}">Home</a>
+                        <a title="home page" class="nav-link {{ Request::is('/') ? 'active':'' }}" href="{{ url('/') }}">Home</a>
                       </li>
                         @php
                             $categories = App\Models\Category::where('navbar_status','0')->where('status','0')->get();
@@ -68,7 +68,7 @@
 
                         @foreach ($categories as $cateitem)
                             <li class="nav-item">
-                                <a class="nav-link {{ Request::is('topic/'.$cateitem->slug) || Request::is('topic/'.$cateitem->slug.'/*') ? 'active':'' }}" href="{{ url('topic/'.$cateitem->slug) }}">{{ $cateitem->name }}</a>
+                                <a title="{{$cateitem->slug .' '. 'page'}}" class="nav-link {{ Request::is('topic/'.$cateitem->slug) || Request::is('topic/'.$cateitem->slug.'/*') ? 'active':'' }}" href="{{ url('topic/'.$cateitem->slug) }}">{{ $cateitem->name }}</a>
                             </li>
                         @endforeach
 
