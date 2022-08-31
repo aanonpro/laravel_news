@@ -1,8 +1,12 @@
 @extends('frontend.master')
 
-@section('title',"$setting->meta_title")
+@section('title',"home")
+@section('meta_description',"home page")
+@section('meta_keyword',"home page keywords")
+
+{{-- @section('title',"$setting->meta_title")
 @section('meta_description',"$setting->meta_description")
-@section('meta_keyword',"$setting->meta_keyword")
+@section('meta_keyword',"$setting->meta_keyword") --}}
 
 @section('content')
 
