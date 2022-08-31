@@ -15,7 +15,7 @@ use App\Http\Controllers\Controller;
 class SettingsController extends Controller
 {
     public function index(){
-        $setting = Setting::find('1');
+        $setting = Setting::find(1);
         return view('admin.setting.index', compact('setting'));
     }
 
@@ -35,7 +35,7 @@ class SettingsController extends Controller
             return redirect('/')->back()->withErrors($validator)->withInput();
         }
 
-        $setting = Setting::where('id',1)->first();
+        $setting = Setting::where('id','1')->first();
         if($setting){
 
             $setting->website_name = $request->website_name;

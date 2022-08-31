@@ -28,7 +28,7 @@
 
     <!-- End plugin css for this page -->
     @php
-    $setting = App\Models\Setting::find('1');
+    $setting = App\Models\Setting::find(1);
     @endphp
     @if ($setting)
     <link rel="shortcut icon" href="{{asset('uploads/settings/'.$setting->favicon)}}" type="image/x-icon"/>
