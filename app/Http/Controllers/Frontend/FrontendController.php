@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Redis;
 class FrontendController extends Controller
 {
     public function index(){
-        // $setting = Setting::find('1');
+        $setting = Setting::find('1');
 
         // $date = Carbon::now()->subDays(1);
 
@@ -22,7 +22,7 @@ class FrontendController extends Controller
 
         // $category_post = Category::where('status','0')->get();
         $all_posts = Post::where('status','0')->orderBy('created_at','DESC')->take(3)->get();
-        return view('frontend.index', compact('cate_item','latest_news','all_posts'));
+        return view('frontend.index', compact('cate_item','latest_news','all_posts','setting'));
 
     }
 

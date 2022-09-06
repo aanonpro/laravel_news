@@ -27,12 +27,12 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/vendors/aos/dist/aos.css/aos.css')}}" />
 
     <!-- End plugin css for this page -->
-    {{-- @php
+    @php
     $setting = App\Models\Setting::find(1);
     @endphp
     @if ($setting)
     <link rel="shortcut icon" href="{{asset('uploads/settings/'.$setting->favicon)}}" type="image/x-icon"/>
-    @endif --}}
+    @endif
     <!-- inject:css -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
     <!-- endinject -->

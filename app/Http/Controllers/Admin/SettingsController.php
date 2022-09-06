@@ -15,8 +15,8 @@ use App\Http\Controllers\Controller;
 class SettingsController extends Controller
 {
     public function index(){
-        // $setting = Setting::find(1);
-        return view('admin.setting.index');
+        $setting = Setting::find(1);
+        return view('admin.setting.index', compact('setting'));
     }
 
     public function savedata(Request $request){
