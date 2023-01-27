@@ -6,7 +6,7 @@
         {{-- <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div> --}}
-        <div class="sidebar-brand-text mx-3"> Admin Panel </div>
+        <div class="sidebar-brand-text mx-3"> Admin Page </div>
     </a>
 
     <!-- Divider -->
@@ -17,6 +17,11 @@
         <a class="nav-link" href="{{ url('admin/dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/') }}" target="_blank">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Go to website</span></a>
     </li>
 
     <!-- Divider -->
